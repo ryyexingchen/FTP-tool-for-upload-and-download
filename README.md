@@ -40,8 +40,8 @@
 ### （5）开启FTP服务器
 	输入“sudo systemctl start vsftpd”开启服务器，利用“sudo systemctl status vsftpd”可以查看当前服务器的状态，利用“sudo systemctl restart vsftpd”可以重启服务器。
 ### （6）测试FTP服务器状态
-	①输入“sudo netstat -antup | grep ftp”指令可以查看FTP服务器连接状态，返回信息如下所示：
+#### ①输入“sudo netstat -antup | grep ftp”指令可以查看FTP服务器连接状态，返回信息如下所示：
 tcp 15 0 192.168.43.237:585681 192.168.43.237:21 CLOSE_WAIT  2802/ ./ftp_upload
 tcp6 0 0 :::21                :::*                    LISTEN  2857 /vsftpd
-	②利用ftp工具连接FTP服务器
+#### ②利用ftp工具连接FTP服务器
 利用“sudo apt-get install ftp”安装ftp工具，安装成功后，可以用“ftp localhost 21”连接FTP服务器，输入用户名密码登录服务器，随后就可以输入指令与FTP服务器进行交互，例如直接在根目录下输入ls就可以看到根目录下的文件。注意，服务器中的根目录“/”的实际目录为之前设置的“local_root”路径。
